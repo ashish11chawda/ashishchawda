@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Ashish Chawda Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixan198/ashishchawda.git"
+  },
+  "author": "Ashish Chawda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pixan198/ashishchawda/issues"
+  },
+  "homepage": "https://github.com/pixan198/ashishchawda#readme"
+}
