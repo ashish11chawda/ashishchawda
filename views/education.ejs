@@ -7,10 +7,13 @@
 	<title>Ashish Chawda</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
 	 crossorigin="anonymous">
+	 
 	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/bg-vanta.css">
+	<link rel="stylesheet" type="text/css" href="/css/education.css">
 </head>
 
-<body>
+<body id="body">
 	<header class="container">
 		<nav id="bt-menu" class="bt-menu">
 			<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
@@ -33,8 +36,27 @@
       <script src="/Script/classie.js"></script>
 	<script src="/Script/borderMenu.js"></script>
 		</header>
-    <main>
-      Education
-    </main>
+    <main id="main">
+	  <h1 class="edu-head">Education</h1>
+	</main>
+	<script src="/Script/three.r119.min.js"></script>
+<script src="/Script/vanta.waves.min.js"></script>
+<script>
+VANTA.WAVES({
+  el: "#main",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x1d1d1d,
+  shininess: 23.00,
+  waveHeight: 23.00,
+  waveSpeed: 2.00,
+  zoom: 0.65
+});
+</script>
 </body>
 </html>

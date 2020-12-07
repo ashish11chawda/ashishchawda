@@ -7,7 +7,7 @@
 	--color-link-hover: #fff;
 	--color-info: #333;
 	--color-title: #fff;
-	--color-subtitle: #fff;
+	--color-subtitle: rgba(255, 255, 255, 0.5);
 	--color-subtitle-bg: #fe0e55;
 	background: #101010 url(../img/X.svg) no-repeat 50% 50%;
 	background-size: 50%;
@@ -23,17 +23,16 @@
 	pointer-events: none;
 }
 
-.content__subtitle {
-	font-size: 1.25em;
-	color: var(--color-subtitle);
+/* .content__subtitle {
+	font-size: 1rem;
+	color: #fff;
 	padding: 0 0.75em;
-	margin: 0;
+	margin: 0; 
 	letter-spacing: 0.5em;
 	text-indent: 0.5em;
 	text-align: center;
 	font-weight: bold;
-	text-transform: uppercase;
-}
+} */
 
 @media screen and (max-width: 55em) {
 	.content__title {
