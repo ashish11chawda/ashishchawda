@@ -29,6 +29,7 @@
 .subtitle-name{
    font-size: 2rem;
    font-family: 'Raleway';
+   color: rgb(255, 217, 0);
 }
 
 @media screen and (max-width: 600px) {
