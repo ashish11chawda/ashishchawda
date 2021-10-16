@@ -25,7 +25,7 @@
 }
 .content__inner{
     z-index: 10;
-    color: #fff;
+    color: #eee;
     height: 100%;
 }
 .content__title{
@@ -38,4 +38,12 @@
     font-family: 'Josefin Sans',monospace;
     font-size: 2.5vw;
     line-height: 3vw;
+}
+
+@media screen and (max-width: 768px) {
+    .content__subtitle{
+        font-size: 5vw;
+        line-height: 1.5;
+        width: 95%;
+    }
 }
