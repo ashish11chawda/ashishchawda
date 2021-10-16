@@ -5,7 +5,7 @@ body{
 #main{
     min-height: 100vh;
 }
-#main .edu-head{
+.edu-head{
     width: 100%;
     color: #fff;
     font-family: 'Montserrat',sans-serif;
@@ -13,4 +13,41 @@ body{
     text-align: center;
     font-size: 5vw;
     padding: 10vh;
+}
+.edu-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Montserrat',sans-serif;
+}
+.edu-container .edu-wrapper{
+    width: 80%;
+    align-self: center;
+    margin: 1.5rem 0;
+}
+.edu-college{
+    background-color: #ffd900;
+    color: #464646;
+}
+.edu-degree{
+    font-style: italic;
+    color: #ffd900;
+}
+.edu-degree .edu-date{
+    display: block;
+    font-style: normal;
+    font-weight: 500;
+    color: #ffd900;
+    margin: 0.3rem 0;
+}
+.edu-desc{
+    margin-top: 1rem;
+}
+@media screen and (max-width: 768px){
+    #main .edu-head{
+        font-size: 9vw;
+    }
 }

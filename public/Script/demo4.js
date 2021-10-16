@@ -19,7 +19,7 @@ camera.position.set(0, 0, 350);
 var sphere = new THREE.Group();
 scene.add(sphere);
 var material = new THREE.LineBasicMaterial({
-    color: 0xffff00
+    color: 0xb99e00
 });
 var linesAmount = 50;
 var radius = 100;
