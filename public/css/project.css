@@ -1,0 +1,10 @@
+a{
+    text-decoration: none;
+    color: #fff;
+}
+h3 a{
+    color: #464646;
+}
+li a{
+    text-decoration: underline;
+}
