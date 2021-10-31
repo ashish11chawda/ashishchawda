@@ -1,0 +1,26 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.content{
+    overflow: hidden;
+}
+.scene {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    /* height: 100vh; */
+    max-width: 300%;
+    max-height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    opacity: 80%;
+}
+h1{
+    color: #fff;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 700;
+}
