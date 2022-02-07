@@ -9,6 +9,57 @@
 		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 	<link rel="stylesheet" type="text/css" href="./css/contact.css" />
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+		(function () {
+			emailjs.init("user_DQYbPfC0lXSTAj6W2Uz4e");
+		})();
+		function submitForm() {
+			var submitButton = document.getElementById("submit");
+			submitButton.innerHTML = "Sending...";
+			// get values from FORM
+			var name = document.getElementById("name").value;
+			var email = document.getElementById("email").value;
+			var subject = document.getElementById("subject").value;
+			var message = document.getElementById("message").value;
+			if(!name || name == ""){
+				alert("Please enter your name");
+				return;
+			}
+			if(!email || email == ""){
+				alert("Please enter your email");
+				return;
+			}
+			if(!subject || subject == ""){
+				alert("Please enter your subject");
+				return;
+			}
+			if(!message || message == "" || message.length < 10){
+				alert("Please enter your message or message is too short");
+				return;
+			}
+
+			var templateParams = {
+				name: name,
+				email: email,
+				subject: subject,
+				message: message
+			};
+
+			emailjs.send('service_hx5knzw', 'template_o1upjrq', templateParams)
+				.then(function (response) {
+					submitButton.innerHTML = "Submit";
+					document.getElementById("name").value = "";
+					document.getElementById("email").value = "";
+					document.getElementById("subject").value = "";
+					document.getElementById("message").value = "";
+					alert("Message sent successfully");
+				}, function (error) {
+					console.log('FAILED...', error);
+				});
+		}
+	</script>
 </head>
 
 <body>
@@ -24,39 +75,46 @@
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
 			<ul>
-				<li><a href="http://www.linkedin.com/in/ashishchawda" target="_blank" rel="noreferrer noopener" class=""><i class="fa fa-linkedin"></i></a></li>
-				<li><a href="https://github.com/pixan198" target="_blank" rel="noreferrer noopener" class=""><i class="fa fa-github"></i></a></li>
-				<li><a href="https://www.instagram.com/_tachyon._" target="_blank" rel="noreferrer noopener" class=""><i class="fa fa-instagram"></i></a></li>
-				<li><a href="http://www.twitter.com/ashish11chawda" target="_blank" rel="noreferrer noopener" class=""><i class="fa fa-twitter"></i></a></li>
-			  </ul>
+				<li><a href="http://www.linkedin.com/in/ashishchawda" target="_blank" rel="noreferrer noopener"
+						class=""><i class="fa fa-linkedin"></i></a></li>
+				<li><a href="https://github.com/pixan198" target="_blank" rel="noreferrer noopener" class=""><i
+							class="fa fa-github"></i></a></li>
+				<li><a href="https://www.instagram.com/_tachyon._" target="_blank" rel="noreferrer noopener" class=""><i
+							class="fa fa-instagram"></i></a></li>
+				<li><a href="http://www.twitter.com/ashish11chawda" target="_blank" rel="noreferrer noopener"
+						class=""><i class="fa fa-twitter"></i></a></li>
+			</ul>
 		</nav>
 		<script defer src="./Script/classie.js"></script>
 		<script defer src="./Script/borderMenu.js"></script>
 	</header>
 	<main>
 		<section class="s1">
-            <div class="main-container">
-                <h2>
-                    Let's Connect
-                </h2>
-                <div class="wrapper form-wrapper">
-                    <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" class="contact-form">
-                        <label for="name">
-                            <input type="text" class="input" name="name"  id="name" placeholder="Full Name">
-                        </label>
-                        <label for="email">
-                            <input type="text" class="input" name="email" id="email" placeholder="johndoe@xyz.com">
-                        </label>
-                        <label for="subject">
-                            <input type="text" class="input" name="subject" id="subject" placeholder="Want to Hire you!">
-                        </label>
-                            <textarea name="message" class="input" id="message" placeholder="Type your message here"></textarea>
-                            <div data-netlify-recaptcha="true"></div>
-                        <button class="input btn" type="submit">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </section>
+			<div class="main-container">
+				<h2>
+					Let's Connect
+				</h2>
+				<div class="wrapper form-wrapper">
+					<form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true"
+						class="contact-form">
+						<label for="name">
+							<input type="text" class="input" name="name" id="name" placeholder="Full Name">
+						</label>
+						<label for="email">
+							<input type="text" class="input" name="email" id="email" placeholder="johndoe@xyz.com">
+						</label>
+						<label for="subject">
+							<input type="text" class="input" name="subject" id="subject"
+								placeholder="Want to Hire you!">
+						</label>
+						<textarea name="message" class="input" id="message"
+							placeholder="Type your message here"></textarea>
+						<div data-netlify-recaptcha="true"></div>
+						<button class="input btn" id="submit" onclick="submitForm()" type="button">Submit</button>
+					</form>
+				</div>
+			</div>
+		</section>
 	</main>
 
 </body>
