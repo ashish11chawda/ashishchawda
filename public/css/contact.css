@@ -38,13 +38,15 @@
     border: none;
     border-radius: 10px;
     padding: 0.8rem 0.5rem;
-    background-color: #ffe75d;
+    background-color: #535353;
+    color: #ffd900;
   }
   .btn {
-    background-color: var(--secondaryColor);
-    color: #338eda;
+    background-color: #535353;
+    color: #ffd900;
     font-weight: bold;
     font-size: 1rem;
+    cursor: pointer;
   }
   @media screen and (max-width: 768px) {
     section {
