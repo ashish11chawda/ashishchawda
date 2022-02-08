@@ -35,6 +35,7 @@ body{
 .edu-degree{
     font-style: italic;
     color: #ffd900;
+    margin-top: 1rem;
 }
 .edu-degree .edu-date{
     display: block;
@@ -45,6 +46,11 @@ body{
 }
 .edu-desc{
     margin-top: 1rem;
+}
+
+.edu-desc ul{
+    list-style: none;
+    line-height: 1.5rem;
 }
 @media screen and (max-width: 768px){
     #main .edu-head{
