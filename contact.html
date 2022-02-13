@@ -7,65 +7,16 @@
 	<title>Ashish Chawda</title>
 	<link rel="stylesheet" defer href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
 		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="./css/style.css" />
-	<link rel="stylesheet" type="text/css" href="./css/contact.css" />
+	<link rel="stylesheet" type="text/css" href="./public/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="./public/css/contact.css" />
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-	</script>
-	<script type="text/javascript">
-		(function () {
-			emailjs.init("user_DQYbPfC0lXSTAj6W2Uz4e");
-		})();
-		function submitForm() {
-			var submitButton = document.getElementById("submit");
-			submitButton.innerHTML = "Sending...";
-			// get values from FORM
-			var name = document.getElementById("name").value;
-			var email = document.getElementById("email").value;
-			var subject = document.getElementById("subject").value;
-			var message = document.getElementById("message").value;
-			if(!name || name == ""){
-				alert("Please enter your name");
-				return;
-			}
-			if(!email || email == ""){
-				alert("Please enter your email");
-				return;
-			}
-			if(!subject || subject == ""){
-				alert("Please enter your subject");
-				return;
-			}
-			if(!message || message == "" || message.length < 10){
-				alert("Please enter your message or message is too short");
-				return;
-			}
-
-			var templateParams = {
-				name: name,
-				email: email,
-				subject: subject,
-				message: message
-			};
-
-			emailjs.send('service_hx5knzw', 'template_o1upjrq', templateParams)
-				.then(function (response) {
-					submitButton.innerHTML = "Submit";
-					document.getElementById("name").value = "";
-					document.getElementById("email").value = "";
-					document.getElementById("subject").value = "";
-					document.getElementById("message").value = "";
-					alert("Message sent successfully");
-				}, function (error) {
-					console.log('FAILED...', error);
-				});
-		}
 	</script>
 </head>
 
 <body>
 	<header class="container">
 		<div class="logo-img-head">
-			<img id="logo-ac-head" class="logo-ac-head" src="./images/logo.svg" alt="Ashish Chawda">
+			<img id="logo-ac-head" class="logo-ac-head" src="./public/images/logo.svg" alt="Ashish Chawda">
 		</div>
 		<nav id="bt-menu" class="bt-menu">
 			<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
@@ -88,8 +39,8 @@
 						class=""><i class="fa fa-twitter"></i></a></li>
 			</ul>
 		</nav>
-		<script defer src="./Script/classie.js"></script>
-		<script defer src="./Script/borderMenu.js"></script>
+		<script defer src="./public/Script/classie.js"></script>
+		<script defer src="./public/Script/borderMenu.js"></script>
 	</header>
 	<main>
 		<section class="s1">
@@ -119,7 +70,7 @@
 			</div>
 		</section>
 	</main>
-
+	<script type="text/javascript" src="./public/Script/email.js">	</script>
 </body>
 
 </html>
