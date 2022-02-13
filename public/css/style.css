@@ -35,6 +35,16 @@ body  {
 	background: #a8a8a8; 
   }
 
+  ::-moz-selection { /* Code for Firefox */
+	color: #222222;
+	background: #ffd900;
+  }
+  
+  ::selection {
+	color: #222222;
+	background: #ffd900;
+  }
+
 
 .bt-menu {
 	position: fixed;
