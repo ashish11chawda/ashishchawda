@@ -197,8 +197,8 @@ TweenMax.to(galaxy.rotation, 100, {
     repeat: -1
 });
 
-TweenMax.to(wrap.rotation, 10, {
-    y: Math.PI - 2,
+TweenMax.to(wrap.rotation, 1000, {
+    y: Math.PI * 30,
     z: Math.PI - 2,
     ease: Power0.easeNone,
     delay: 0.2,
