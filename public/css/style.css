@@ -45,7 +45,6 @@ body  {
 	background: #ffd900;
   }
 
-
 .bt-menu {
 	position: fixed;
 	top: 0;
@@ -68,10 +67,10 @@ body  {
 .bt-menu.bt-menu-open {
 	height: 100%;
 	border-width: 0px 0px 50px 150px;
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.705);
 	-webkit-transition: border-width 0.3s, background-color 0.3s;
 	transition: border-width 0.3s, background-color 0.3s;
-   opacity: 100%;
+    opacity: 100%;
 }
 
 .bt-overlay {
@@ -101,7 +100,8 @@ body  {
 	display: block;
 	width: 100%;
 	height: 8%;
-	background: linear-gradient(to right, #ffd900 0%, #ffffff 100%);
+	/* background: linear-gradient(to right, #ffd900 0%, #ffffff 100%); */
+	background: #ffd900;
 	font-size: 0px;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -128,15 +128,19 @@ body  {
 .bt-menu-trigger span:before {
 	-webkit-transform: translateY(-250%);
 	transform: translateY(-250%);
-	background: linear-gradient(to right, #ffd900 0%, #ffffff 100%);
+	/* background: linear-gradient(to right, #ffd900 0%, #ffffff 100%); */
+	background: #ffd900;
 }
 
 .bt-menu-trigger span:after {
 	-webkit-transform: translateY(250%);
 	transform: translateY(250%);
-	background: linear-gradient(to right, #ffd900 0%, #ffffff 100%);
+	/* background: linear-gradient(to right, #ffd900 0%, #ffffff 100%); */
+	background: #ffd900;
 }
-
+/* .bt-menu-open {
+	backdrop-filter: blur(10px);
+} */
 .bt-menu-open .bt-menu-trigger span{
 	background: rgba(0, 0, 0, 0);
 }
@@ -158,7 +162,6 @@ body  {
 	margin: 0;
 	padding: 0;
 	list-style: none;
- 
 }
 
 .bt-menu ul:first-of-type {
@@ -315,6 +318,7 @@ body  {
   height: 5rem;
   opacity: 0%;
   transition: opacity 0.2s ease-in;
+  z-index: 100;
 }
 .logo-ac-head:hover,.logo-ac-head:focus{
   opacity: 100%;

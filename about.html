@@ -29,11 +29,11 @@
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
 			<ul>
-				<li><a href="http://www.linkedin.com/in/ashishchawda" target="_blank" rel="noreferrer noopener" class=""><i class="fa fa-linkedin"></i></a></li>
-				<li><a href="https://github.com/pixan198" target="_blank" rel="noreferrer noopener" class=""><i class="fa fa-github"></i></a></li>
-				<li><a href="https://www.instagram.com/_tachyon._" target="_blank" rel="noreferrer noopener" class=""><i class="fa fa-instagram"></i></a></li>
+				<li><a href="http://www.linkedin.com/in/ashish11chawda" target="_blank" rel="noreferrer noopener" class=""><i class="fa fa-linkedin"></i></a></li>
+				<li><a href="https://github.com/ashish11chawda" target="_blank" rel="noreferrer noopener" class=""><i class="fa fa-github"></i></a></li>
+				<li><a href="https://www.instagram.com/ashish11chawda" target="_blank" rel="noreferrer noopener" class=""><i class="fa fa-instagram"></i></a></li>
 				<li><a href="http://www.twitter.com/ashish11chawda" target="_blank" rel="noreferrer noopener" class=""><i class="fa fa-twitter"></i></a></li>
-				<li><a href="https://www.youtube.com/channel/UCtYnDIV1gUKYyiJjDg8I85A" target="_blank" rel="noreferrer noopener" class=""><i class="fa fa-youtube-play"></i></a></li>
+				<li><a href="https://www.youtube.com/@ashish11chawda" target="_blank" rel="noreferrer noopener" class=""><i class="fa fa-youtube-play"></i></a></li>
 			  </ul>
 		</nav>
 		<script src="./public/Script/classie.js"></script>
@@ -44,21 +44,40 @@
 	</main>
 	<div class="content">
 		<canvas class="scene scene--full" id="scene"></canvas>
+		<script type="x-shader/x-vertex" id="wrapVertexShader">
+			attribute float size;
+			attribute vec3 color;
+			varying vec3 vColor;
+			void main() {
+				vColor = color;
+				vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+				gl_PointSize = size * ( 350.0 / - mvPosition.z );
+				gl_Position = projectionMatrix * mvPosition;
+			}
+		</script>
+		<script type="x-shader/x-fragment" id="wrapFragmentShader">
+			varying vec3 vColor;
+			uniform sampler2D texture;
+			void main(){
+				vec4 textureColor = texture2D( texture, gl_PointCoord );
+				if ( textureColor.a < 0.3 ) discard;
+				vec4 color = vec4(vColor.xyz, 1.0) * textureColor;
+				gl_FragColor = color;
+			}
+		</script>
 	</div>
 	<div class="content__inner">
-		<h2 class="content__title">Hi👋🏻<br/> I'm Ashish Chawda</h2>
+		<h2 class="content__title">Hey there!</h2>
 		<p class="content__subtitle">
-			I am a Computer Science Undergraduate at Shri Shankaracharya Technical Campus, Bhilai.
-			I am a Full-Stack Web Developer and a community guy, who loves to learn new things and share my knowledge. I've explored many technologies and I'm always looking for new ways to improve myself.
-			I love to watch Space and Astronomy related documentaries and have a casual interest in Geopolitics.
-			I love to play football on weekends and folk music is my escape from stress.
+			Meet Ashish Chawda, the java ninja and software developer at Tray! He's Computer Science grad from Shri Shankaracharya Technical Campus, Bhilai and has mastered the art of Full-Stack Development. But that's not all - this dude is a total community guy who loves learning new things and sharing his knowledge with others.
+
+			When he's not coding, you'll find Ashish indulging in his passions for Space and Astronomy, Geopolitics, football, and folk music. He loves to kick back and watch space and astronomy documentaries, stay updated with all the latest geopolitical happenings, play football on the weekends, and listen to some soulful folk music to de-stress.
 		</p>
 	</div>
-	<script defer src="./public/Script/demo.js"></script>
 	<script defer src="./public/Script/three.min.js"></script>
 	<script defer src="./public/Script/perlin.js"></script>
 	<script defer src="./public/Script/TweenMax.min.js"></script>
-	<script defer src="./public/Script/demo4.js"></script>
+	<script defer src="./public/Script/information.js"></script>
 </body>
 
 </html>
