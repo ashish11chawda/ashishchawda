@@ -111,6 +111,7 @@ Tunnel.prototype.onMouseDown = function() {
     speed: 0.1,
     ease: Power2.easeInOut
   });
+  document.getElementById("heading1").style.display = "none";
 };
 Tunnel.prototype.onMouseUp = function() {
   this.mousedown = false;
