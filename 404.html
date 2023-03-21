@@ -9,10 +9,11 @@
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./public/css/style.css" />
   <style>
-    .bt-menu{
-      overflow: hidden ;
+    .bt-menu {
+      overflow: hidden;
     }
-    .heading{
+
+    .heading {
       position: absolute;
       top: 10%;
       left: 50%;
@@ -22,8 +23,20 @@
       font-size: 4rem;
       text-align: center;
     }
-    .bt-menu-trigger span, .bt-menu-trigger span:before, .bt-menu-trigger span:after {
+
+    .bt-menu-trigger span,
+    .bt-menu-trigger span:before,
+    .bt-menu-trigger span:after {
       background: #222;
+    }
+
+    @media screen and (max-width: 600px) {
+      .heading {
+        font-size: 1rem;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+      }
     }
   </style>
 </head>
@@ -44,19 +57,24 @@
         <li><a href="./blog.html">Blog</a></li>
         <li><a href="./contact.html">Contact</a></li>
       </ul>
-			<ul>
-				<li><a href="http://www.linkedin.com/in/ashish11chawda" target="_blank" rel="noreferrer noopener" class=""><i class="fa fa-linkedin"></i></a></li>
-				<li><a href="https://github.com/ashish11chawda" target="_blank" rel="noreferrer noopener" class=""><i class="fa fa-github"></i></a></li>
-				<li><a href="https://www.instagram.com/ashish11chawda" target="_blank" rel="noreferrer noopener" class=""><i class="fa fa-instagram"></i></a></li>
-				<li><a href="http://www.twitter.com/ashish11chawda" target="_blank" rel="noreferrer noopener" class=""><i class="fa fa-twitter"></i></a></li>
-				<li><a href="https://www.youtube.com/@ashish11chawda" target="_blank" rel="noreferrer noopener" class=""><i class="fa fa-youtube-play"></i></a></li>
-			</ul>
+      <ul>
+        <li><a href="http://www.linkedin.com/in/ashish11chawda" target="_blank" rel="noreferrer noopener" class=""><i
+              class="fa fa-linkedin"></i></a></li>
+        <li><a href="https://github.com/ashish11chawda" target="_blank" rel="noreferrer noopener" class=""><i
+              class="fa fa-github"></i></a></li>
+        <li><a href="https://www.instagram.com/ashish11chawda" target="_blank" rel="noreferrer noopener" class=""><i
+              class="fa fa-instagram"></i></a></li>
+        <li><a href="http://www.twitter.com/ashish11chawda" target="_blank" rel="noreferrer noopener" class=""><i
+              class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.youtube.com/@ashish11chawda" target="_blank" rel="noreferrer noopener" class=""><i
+              class="fa fa-youtube-play"></i></a></li>
+      </ul>
     </nav>
     <script src="./public/Script/classie.js"></script>
     <script src="./public/Script/borderMenu.js"></script>
   </header>
   <main>
-    <h1 class="heading heading-name" id="heading1">So its a 404 page! <br/> Enjoy :)</h1>
+    <h1 class="heading heading-name" id="heading1">So its a 404 page! <br /> Enjoy :)</h1>
     <div class="content" style="overflow: hidden; overflow-y: hidden;">
       <!-- The canvas where ThreeJs renders the WebGL -->
       <canvas id="scene" class="clickable"></canvas>
