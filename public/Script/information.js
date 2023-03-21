@@ -48,7 +48,7 @@ var renderer = new THREE.WebGLRenderer({
 });
 renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1);
 renderer.setSize(width, height);
-renderer.setClearColor(0x111111);
+renderer.setClearColor(0x222222);
 
 var scene = new THREE.Scene();
 
@@ -241,12 +241,6 @@ function onMouseMove(e) {
     var canvasBounding = canvas.getBoundingClientRect();
     mouse.x = ((e.clientX - canvasBounding.left) / width) * 2 - 1;
     mouse.y = -((e.clientY - canvasBounding.top) / height) * 2 + 1;
-    // TweenMax.to(galaxy.rotation, 1, {
-    //     x : (-mouse.y * 0.5),
-    //     y: (-mouse.x * 0.5),
-    //     delay: 0.2,
-    //     ease:Power1.easeOut
-    // });
 }
 
 TweenMax.ticker.addEventListener("tick", render);

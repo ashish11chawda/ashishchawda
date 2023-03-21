@@ -23,6 +23,7 @@
 			<ul>
 				<li><a href="/">Home</a></li>
 				<li><a href="about.html">About Me</a></li>
+				<li><a href="./exp.html">Experience</a></li>
 				<li><a href="education.html">Education</a></li>
 				<li><a href="project.html">Projects</a></li>
 				<li><a href="blog.html">Blog</a></li>
@@ -78,6 +79,15 @@
 	<script defer src="./public/Script/perlin.js"></script>
 	<script defer src="./public/Script/TweenMax.min.js"></script>
 	<script defer src="./public/Script/information.js"></script>
+	<script>
+		// make the scene responsive if it is on mobile device 
+		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+		if (isMobile) {
+			document.getElementById("scene").setAttribute("width", window.innerWidth);
+			document.getElementById("scene").setAttribute("height", window.innerHeight);
+			document.getElementById("scene").removeAttribute("style");
+		}
+	</script>
 </body>
 
 </html>
